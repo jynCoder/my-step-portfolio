@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body>
+  <body style="background-color = light-blue;">
     <div id="content">
       <h1>My Portfolio</h1>
       <h2>By Dalen Witthoft </h2>
@@ -28,12 +28,82 @@
     </p>
     
     <div>
-        <h1>Previous experience  </h1>
-        <ul>4 Years of CS club in HS </ul>
-        <ul>ID tech camp focusing on C#</ul>
-        <ul>A&M engineering camp focusing on python</ul>
-        <ul>Google's CSSI camp @ MTV: built a web app</ul>
+        <h1>Experience  </h1>
+        <ul><img src= "/images/check.png" style="width:5=10px;height:20px;"> 4 Years of CS club in HS </ul>
+        <ul><img src= "/images/check.png" style="width:5=10px;height:20px;"> ID tech camp focusing on C#</ul>
+        <ul><img src= "/images/check.png" style="width:5=10px;height:20px;"> A&M engineering camp focusing on python</ul>
+        <ul><img src= "/images/check.png" style="width:5=10px;height:20px;"> Google's CSSI camp @ MTV: built a web app</ul>
     </div>
+
+    <!-- Container for the image gallery -->
+<h1> Here are some cool pictures of the places I have been to around the World! </h1>
+<div class="flex-container">
+<div class="container">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+      <img src="/images/venice2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+      <img src="/images/empire_state.jpg" sstyle="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+      <img src="/images/mtfuji2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+      <img src="/images/niagra2.jpeg" sstyle="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+      <img src="/images/puerto.jpg" sstyle="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <img src="/images/tokyo2.jpg" s style="width:100%">
+  </div>
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="/images/venice2.jpg"  style="width:100%" onclick="currentSlide(1)" alt="Venice Beach">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="/images/empire_state.jpg"  style="width:100%" onclick="currentSlide(2)" alt="Empire State Building">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="/images/mtfuji2.jpg"  style="width:100%" onclick="currentSlide(3)" alt="Mt.Fuji">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="/images/niagra2.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Niagra Falls">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="/images/puerto.jpg"  style="width:100%" onclick="currentSlide(5)" alt="Puerto Rico">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="/images/tokyo2.jpg"  style="width:100%" onclick="currentSlide(6)" alt="Tokyo, Japan">
+    </div>
+  </div>
+</div>
+</div>
     
   </body>
 </html>
