@@ -53,6 +53,10 @@ title{
   -webkit-user-select: none;
 }
 
+header{
+    color: white;
+}
+
 /* Position the "next button" to the right */
 .next {
   right: 0;
@@ -110,4 +114,7 @@ img{
 }
 ul{
     font-size: 20px;
+}
+ul:hover{
+    color: red;
 }

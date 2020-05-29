@@ -17,7 +17,9 @@
  */
 function addRandomGreeting() {
   const greetings =
-      ['Hello world!', 'I have 2 cats :3!', '你好，世界！', 'Bonjour le monde!', 'True power of use human beings is that we can change ourselves on our own- Saitama.', 'You don\'t need to be on anyone\'s side but your own.- Itaewon Class'];
+      ['Hello world!', 'I have 2 cats :3!', '你好，世界！', 
+      'Bonjour le monde!', 'True power of use human beings is that we can change ourselves on our own- Saitama.',
+       'You don\'t need to be on anyone\'s side but your own.- Itaewon Class'];
 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
