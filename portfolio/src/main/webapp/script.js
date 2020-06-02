@@ -29,6 +29,11 @@ function addRandomGreeting() {
   greetingContainer.innerText = greeting;
 }
 
+async function helloMe(){
+ fetch('/data').then(response => response.text()).then((quote) => 
+    document.getElementById('helloMeCont').innerText = quote);
+}
+
 
 var slideIndex = 1;
 showSlides(slideIndex);
