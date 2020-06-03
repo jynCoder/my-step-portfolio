@@ -29,9 +29,9 @@ function addRandomGreeting() {
   greetingContainer.innerText = greeting;
 }
 
-async function helloMe(){
+function commentHandler(){
  fetch('/data').then(response => response.text()).then((quote) => 
-    document.getElementById('helloMeCont').innerText = quote);
+    document.getElementById('commentSection').innerText = quote);
 }
 
 
