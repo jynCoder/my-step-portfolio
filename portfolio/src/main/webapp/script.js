@@ -30,8 +30,22 @@ function addRandomGreeting() {
 }
 
 function commentHandler(){
- fetch('/data').then(response => response.text()).then((quote) => 
-    document.getElementById('commentSection').innerText = quote);
+ fetch('/data').then(response => response.json()).then((Comment) =>{
+     const commentListElement = document.getElementById('comment-list');
+     Comment.forEach((text) =>{
+         commentListElement.appendChild(newComment(text.comment));
+     })
+ }); 
+    
+}
+
+function newComment(text){
+    const commentElement = document.createElement('li');
+    commentElement.className = "comment";
+
+    commentElement.innerText = text;
+
+    return commentListElement;
 }
 
 
