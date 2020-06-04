@@ -25,33 +25,32 @@ import java.util.List;
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
-    private List<String> messages;
+    
   @Override
-  public void init(){
-    messages = new ArrayList<>(); 
-  }
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    String json = convertToJsonUsingGson(messages);
+
+    private List<String> messages = new ArrayList<>();
+    String json = toJson(messages);
     response.setContentType("application/json;");
     response.getWriter().println(json);
   }
- 
+
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
-     String text = getParameter(request, "comment", "");
+     private static final String COMMENT = "comment";
+     String text = getParameter(request, COMMENT, "");
      messages.add(text);
      response.sendRedirect("/index.html");
   }
-  private String convertToJsonUsingGson(List<String> messages) {
+
+  private String toJson(List<String> messages) {
     Gson gson = new Gson();
     String json = gson.toJson(messages);
     return json;
   }
+
   private String getParameter(HttpServletRequest request, String name, String defaultValue) {
     String value = request.getParameter(name);
-    if (value == null) {
-      return defaultValue;
-    }
-    return value;
+    value ? value : defaultValue;
   }
 
 }
