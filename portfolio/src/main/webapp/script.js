@@ -30,9 +30,11 @@ function addRandomGreeting() {
 }
 
 function commentHandler(){
- fetch('/data').then(response => response.json()).then((Comment) =>{
+ fetch('/load-comments').then(response => response.json()).then((Comment) =>{
      const commentListElement = document.getElementById('comment-list');
-     Comment.forEach((text) =>{
+     console.log("before the for loop");
+     Comment.forEach((text) => {
+         console.log("In the loop");
          commentListElement.appendChild(newComment(text.comment));
      })
  }); 
@@ -45,7 +47,7 @@ function newComment(text){
 
     commentElement.innerText = text;
 
-    return commentListElement;
+    return commentElement;
 }
 
 
