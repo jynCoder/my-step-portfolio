@@ -36,16 +36,15 @@ import com.google.sps.servlets.LoadComments;
 @WebServlet("/create-comment")
 public class CreateComment extends HttpServlet {
   private static final String COMMENT = "comment";
- 
+  private static final String TIMESTAMP = "timestamp";
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
-    
      String text = request.getParameter(COMMENT);
      long timestamp = System.currentTimeMillis();
 
      Entity commentEntity = new Entity("Comment");
-     commentEntity.setProperty("comment", text);
-     commentEntity.setProperty("timestamp", timestamp);
+     commentEntity.setProperty(COMMENT, text);
+     commentEntity.setProperty(TIMESTAMP, timestamp);
      DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
      datastore.put(commentEntity);
 
@@ -54,9 +53,10 @@ public class CreateComment extends HttpServlet {
 
   private String getParameter(HttpServletRequest request, String name, String defaultValue) {
     String value = request.getParameter(name);
-    if (value == null) {
+       if (value == null) {
       return defaultValue;
-    }
-    return value;
+     }
+      return value;
   }
+  
 }

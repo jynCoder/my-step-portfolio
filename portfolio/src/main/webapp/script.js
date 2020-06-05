@@ -50,6 +50,11 @@ function newComment(text){
     return commentElement;
 }
 
+function deleteComment(){
+    const request = new Request("/delete-data", {method: 'POST'});
+    fetch(request).then(commentHandler());
+}
+
 var slideIndex = 1;
 showSlides(slideIndex);
 

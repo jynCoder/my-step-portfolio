@@ -11,7 +11,6 @@
     </header>   
 </div>
 
- 
     <div id="content">
       <img id = "avatar" src = "/images/rimuru.png">
       <p>Click here to get a multilingual random message:</p>
@@ -26,6 +25,7 @@
           <input type="text" name="comment">
           <button>Submit</button>
         </form>
+        <button onclick="deleteComment()">Delete</button>
    
     <p>
         Hi,
@@ -46,7 +46,6 @@
         <ul><img id= "ulimage" src= "/images/check.png"> A&M engineering camp focusing on python</ul>
         <ul><img id= "ulimage" src= "/images/check.png"> Google's CSSI camp @ MTV: built a web app</ul>
     </div>
-
 
 <h1> Here are some cool pictures of the places I have been to around the World! </h1>
 <!-- Container for the image gallery -->
@@ -82,11 +81,9 @@
       <img src="/images/tokyo2.jpg">
   </div>
 
-
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-  
   <div class="caption-container">
     <p id="caption"></p>
   </div>
