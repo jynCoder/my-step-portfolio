@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<div >
+<div>
     <meta charset="UTF-8">
-    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeV15DxQxVheu7UAITdS4X_ciCPE9FeEU"></script>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   
@@ -17,16 +17,18 @@
       <button onclick="addRandomGreeting()">Hello!</button>
       <div id="greeting-container"></div> 
     </div>
-      <body onload="commentHandler()"> 
-        <ul id="comment-list"></ul>
+    
+<body onload="commentHandler()">
+        
+    <ul id="comment-list"></ul>
 
-        <form action="/create-comment" method="POST">
-          <p id="commentSection"></p>
-          <input type="text" name="comment">
-          <button>Submit</button>
-        </form>
-        <button onclick="deleteComment()">Delete</button>
-   
+    <form action="/create-comment" method="POST">
+        <p id="commentSection"></p>
+        <input type="text" name="comment">
+        <button>Submit</button>
+    </form>
+    <button onclick="deleteComment()">Delete</button>
+
     <p>
         Hi,
         I am Dalen Witthoft and I am a rising sophmore at Boston University. I am majoring in 
@@ -47,6 +49,9 @@
         <ul><img id= "ulimage" src= "/images/check.png"> Google's CSSI camp @ MTV: built a web app</ul>
     </div>
 
+<!-- Div for the Maps API implementation --> 
+<a href="maps.html"><h3> test map </h3>
+<br>
 <h1> Here are some cool pictures of the places I have been to around the World! </h1>
 <!-- Container for the image gallery -->
 <div class="container">
@@ -69,7 +74,7 @@
   <div class="mySlides">
     <div class="numbertext">4 / 6</div>
       <img src="/images/niagra3.jpg" >
-        </div>
+  </div>
 
   <div class="mySlides">
     <div class="numbertext">5 / 6</div>
@@ -110,5 +115,5 @@
     </div>
   </div>
 </div> 
-  </body>
+</body>
 </html>

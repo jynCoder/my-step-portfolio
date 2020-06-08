@@ -11,10 +11,10 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
 /**
  * Adds a random greeting to the page.
  */
+ console.log("in js");
 function addRandomGreeting() {
   const greetings =
       ['Hello world!', 'I have 2 cats :3!', '你好，世界！', 
@@ -28,7 +28,7 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
-
+console.log("b4 ch");
 function commentHandler(){
  fetch('/load-comments').then(response => response.json()).then((Comment) =>{
      const commentListElement = document.getElementById('comment-list');
