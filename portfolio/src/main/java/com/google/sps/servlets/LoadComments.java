@@ -36,10 +36,8 @@ public class LoadComments extends HttpServlet{
       Comment newComm = new Comment(id, text);
       messages.add(newComm);
     }
-
-    Gson gson = new Gson();
-    String json = gson.toJson(messages);
-
+    String json = new Gson().toJson(messages);
+    
     response.setContentType("application/json;");
     response.getWriter().println(json);
 
