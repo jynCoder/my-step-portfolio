@@ -37,6 +37,7 @@ import com.google.sps.servlets.LoadComments;
 public class CreateComment extends HttpServlet {
   private static final String COMMENT = "comment";
   private static final String TIMESTAMP = "timestamp";
+  
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
      String text = request.getParameter(COMMENT);
@@ -53,7 +54,7 @@ public class CreateComment extends HttpServlet {
 
   private String getParameter(HttpServletRequest request, String name, String defaultValue) {
     String value = request.getParameter(name);
-       if (value == null) {
+    if (value == null) {
       return defaultValue;
      }
       return value;

@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/load-comments")
 public class LoadComments extends HttpServlet{
-    private static final String COMMENT = "comment";
+  private static final String COMMENT = "comment";
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
