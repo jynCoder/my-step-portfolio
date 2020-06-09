@@ -33,8 +33,7 @@ public class LoadComments extends HttpServlet{
       long id = entity.getKey().getId();
       String text = (String) entity.getProperty("comment");
         
-      Comment newComm = new Comment(id, text);
-      messages.add(newComm);
+      messages.add(new Comment(id, text));
     }
     String json = new Gson().toJson(messages);
     
