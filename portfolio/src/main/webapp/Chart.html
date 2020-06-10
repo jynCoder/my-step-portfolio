@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Favorite Video streaming Site</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="chartScript.js"></script>
+  </head>
+  <body>
+    <h1>Favorite Video Streaming Website</h1>
+    <div id="chart-container"></div>
+    <h2>Vote</h2>
+    <form action="/vsVote-data" method="POST">
+      <select name="video">
+        <option value="YouTube">YouTube</option>
+        <option value="Twitch">Twitch</option>
+        <option value="Facebook Gaming">Facebook Gaming</option>
+        <option value="Hulu">Hulu</option>
+        <option value="Netflix">Netflix</option>
+        <option value="Crunchyroll">Crunchyroll</option>
+      </select>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
