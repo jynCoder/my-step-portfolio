@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/vsVote-data")
 public class CreateChart extends HttpServlet{
-
     private Map<String, Integer> videoVotes = new HashMap<>();
 
     @Override
@@ -30,7 +29,4 @@ public class CreateChart extends HttpServlet{
 
         response.sendRedirect("/Chart.html");
     }
-
-
-
 } 

@@ -32,7 +32,6 @@ public class LoadComments extends HttpServlet{
     for (Entity entity : results.asIterable()){
       long id = entity.getKey().getId();
       String text = (String) entity.getProperty("comment");
-        
       messages.add(new Comment(id, text));
     }
     String json = new Gson().toJson(messages);
